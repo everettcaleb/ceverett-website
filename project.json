@@ -10,6 +10,7 @@
         "Microsoft.AspNet.Routing": "1.0.0-beta4",
         "Microsoft.AspNet.Server.IIS": "1.0.0-beta4",
         "Microsoft.AspNet.Server.WebListener": "1.0.0-beta4",
+        "Microsoft.AspNet.StaticFiles": "1.0.0-beta4",
         "Kestrel": "1.0.0-beta4"
     },
 

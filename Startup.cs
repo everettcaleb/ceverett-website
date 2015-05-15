@@ -1,5 +1,6 @@
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Diagnostics;
+using Microsoft.AspNet.StaticFiles;
 using Microsoft.Framework.DependencyInjection;
 
 namespace CEverett
@@ -15,6 +16,8 @@ namespace CEverett
         public void Configure(IApplicationBuilder app)
         {
             app.UseErrorPage(ErrorPageOptions.ShowAll);
+            app.UseStaticFiles();
+            app.UseStatusCodePages();
             app.UseMvc();
             
             app.Run(async (context) => {
