@@ -1,6 +1,7 @@
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Diagnostics;
-using Microsoft.AspNet.StaticFiles;
+using Microsoft.AspNet.Http;
+using Microsoft.AspNet.WebUtilities;
 using Microsoft.Framework.DependencyInjection;
 
 namespace CEverett
@@ -21,7 +22,9 @@ namespace CEverett
             app.UseMvc();
             
             app.Run(async (context) => {
-                //throw new Exception("Test");
+                context.Response.StatusCode = StatusCodes.Status404NotFound;
+                context.Response.ContentType = "text/plain";
+                await context.Response.WriteAsync("404 Page Not Found");
             });
         }
     }
