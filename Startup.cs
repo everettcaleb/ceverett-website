@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Http;
+using Microsoft.AspNet.Diagnostics;
 using Microsoft.Framework.DependencyInjection;
 
 namespace CEverett
@@ -13,13 +9,16 @@ namespace CEverett
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app)
         {
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
+            app.UseErrorPage(ErrorPageOptions.ShowAll);
+            app.UseMvc();
+            
+            app.Run(async (context) => {
+                //throw new Exception("Test");
             });
         }
     }
