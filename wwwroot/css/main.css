@@ -1,4 +1,4 @@
-/* line 11, ../../sass/main.scss */
+/* line 10, ../../sass/main.scss */
 html, body {
   height: 100%;
   margin: 0;
@@ -6,101 +6,96 @@ html, body {
   width: 100%;
 }
 
-/* line 18, ../../sass/main.scss */
-body {
-  font-size: 14px;
-}
-
-/* line 24, ../../sass/main.scss */
+/* line 19, ../../sass/main.scss */
 header nav {
   display: block;
   height: 44px;
   transition: all 0.75s ease;
 }
 
-/* line 31, ../../sass/main.scss */
+/* line 26, ../../sass/main.scss */
 article.post {
-  padding: 30px;
+  padding: 26px;
 }
-/* line 34, ../../sass/main.scss */
+/* line 29, ../../sass/main.scss */
 article.post h2.title {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 37.08282px;
-  line-height: 60px;
+  font-size: 32.13844px;
+  line-height: 52px;
   margin: 0;
   padding: 0;
 }
-/* line 41, ../../sass/main.scss */
+/* line 36, ../../sass/main.scss */
 article.post h2.title .filler {
   font-weight: 300;
   font-style: italic;
 }
-/* line 46, ../../sass/main.scss */
+/* line 41, ../../sass/main.scss */
 article.post h2.title .important {
   font-weight: 600;
   text-transform: uppercase;
 }
-/* line 52, ../../sass/main.scss */
+/* line 47, ../../sass/main.scss */
 article.post .byline, article.post .tags {
   color: #777;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 26px;
   margin: 0;
 }
-/* line 59, ../../sass/main.scss */
+/* line 54, ../../sass/main.scss */
 article.post .byline a, article.post .tags a {
   color: inherit;
   text-decoration: none;
 }
-/* line 65, ../../sass/main.scss */
+/* line 60, ../../sass/main.scss */
 article.post .byline {
-  padding: 0 0 30px 0;
+  padding: 0 0 26px 0;
 }
-/* line 68, ../../sass/main.scss */
+/* line 63, ../../sass/main.scss */
 article.post .byline:before {
   content: "By ";
   font-style: italic;
 }
-/* line 73, ../../sass/main.scss */
+/* line 68, ../../sass/main.scss */
 article.post .byline a.author {
   text-transform: uppercase;
 }
-/* line 78, ../../sass/main.scss */
+/* line 73, ../../sass/main.scss */
 article.post .byline .date:before {
   content: " on ";
   font-style: italic;
 }
-/* line 85, ../../sass/main.scss */
+/* line 80, ../../sass/main.scss */
 article.post .tags {
   padding: 0;
 }
-/* line 88, ../../sass/main.scss */
+/* line 83, ../../sass/main.scss */
 article.post .tags a.tag {
-  font-size: 11.12485px;
+  font-size: 9.88875px;
   text-transform: uppercase;
 }
-/* line 92, ../../sass/main.scss */
+/* line 87, ../../sass/main.scss */
 article.post .tags a.tag:after {
   content: ",";
 }
-/* line 96, ../../sass/main.scss */
+/* line 91, ../../sass/main.scss */
 article.post .tags a.tag:last-of-type:after {
   content: "";
 }
-/* line 102, ../../sass/main.scss */
+/* line 97, ../../sass/main.scss */
 article.post p {
   font-family: "Merriweather", "Times New Roman", Times, serif;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 26px;
   margin: 0;
   padding: 0;
 }
-/* line 109, ../../sass/main.scss */
+/* line 104, ../../sass/main.scss */
 article.post p a.read-more {
   color: #777;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 11.12485px;
+  font-size: 9.88875px;
   text-decoration: none;
   text-transform: uppercase;
 }

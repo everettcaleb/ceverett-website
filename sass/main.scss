@@ -1,8 +1,7 @@
 @import "compass";
 $golden-ratio: 1.618;
-$base-font-size: 14px;
-$main-font-size: 18px;
-$main-line-height: ceil(18px * $golden-ratio);
+$main-font-size: 16px;
+$main-line-height: ceil($main-font-size * $golden-ratio);
 $heading-line-height: $main-line-height * 2;
 $heading-font-size: $heading-line-height / $golden-ratio;
 $font-sans: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -13,10 +12,6 @@ html, body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-}
-
-body {
-	font-size: $base-font-size;
 }
 
 header {
