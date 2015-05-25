@@ -1,2 +1,10 @@
 @using CEverett.ViewModels
 @model PostViewModel
+
+<div class="tags">
+    <i class="fa fa-tag"></i>
+	@foreach(var tag in Model.Tags)
+	{
+		<a class="tag" href="/?q=@tag">@tag</a>	
+	}
+</div>

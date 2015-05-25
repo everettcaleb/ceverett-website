@@ -1,4 +1,12 @@
 @import "compass";
+$golden-ratio: 1.618;
+$base-font-size: 14px;
+$main-font-size: 18px;
+$main-line-height: ceil(18px * $golden-ratio);
+$heading-line-height: $main-line-height * 2;
+$heading-font-size: $heading-line-height / $golden-ratio;
+$font-sans: 'Open Sans', Helvetica, Arial, sans-serif;
+$font-serif: 'Merriweather', 'Times New Roman', Times, serif;
 
 html, body {
 	height: 100%;
@@ -8,7 +16,7 @@ html, body {
 }
 
 body {
-	font-size: 14px;
+	font-size: $base-font-size;
 }
 
 header {
@@ -18,4 +26,71 @@ header {
 		height: 44px;
 		transition: all 0.75s ease;
 	}
+}
+
+article.post {
+    padding: $main-line-height;
+    
+    h2.title {
+        font-family: $font-sans;
+        font-size: $heading-font-size;
+        line-height: $heading-line-height;
+        margin: 0;
+        padding: 0;
+        
+        .filler {
+            font-weight: 300;
+            font-style: italic;
+        }
+        
+        .important {
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+    
+    .byline, .tags {
+        color: #777;
+        font-family: $font-sans;
+        font-size: $main-font-size;
+        line-height: $main-line-height;
+        margin: 0;
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+    
+    .byline {
+        padding: 0 0 $main-line-height 0;
+        
+        a.author {
+            text-transform: uppercase;
+        }
+        .date {
+        
+        }
+    }
+    
+    .tags {
+        padding: 0;
+        
+        a.tag {
+            &:after {
+                content:","
+            }
+            &:last-of-type:after {
+                content:""
+            }
+        }
+    }
+    
+    p {
+        font-family: $font-serif;
+        font-size: $main-font-size;
+        line-height: $main-line-height;
+        margin: 0;
+        padding: 0;
+    }
 }

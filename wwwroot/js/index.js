@@ -1,3 +1,3 @@
-require(['jquery', 'baseliner'], function($, b) {
+require(['jquery', 'baseliner', 'heading-highlighter'], function($, b) {
 	//baseliner = new Baseliner(8);
 });
