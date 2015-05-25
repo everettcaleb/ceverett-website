@@ -13,7 +13,7 @@ Software projects used to power this website:
 - [jQuery](https://jquery.com)
 - [RequireJS](http://requirejs.org)
 
-## The MIT License (MIT)
+## License
 Copyright © 2015 Caleb Everett
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
