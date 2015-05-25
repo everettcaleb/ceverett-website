@@ -4,7 +4,7 @@
 	@Html.Partial("_PostHeader")
 	<p class="summary">
 		@Model.Summary
+        <a class="read-more" href="/post/@Model.Id">Read More...</a>
 	</p>
-	<a href="/post/@Model.Id">Read More...</a>
 	@Html.Partial("_PostFooter")
 </article>

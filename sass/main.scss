@@ -65,11 +65,20 @@ article.post {
     .byline {
         padding: 0 0 $main-line-height 0;
         
+        &:before {
+            content:"By ";
+            font-style: italic;
+        }
+        
         a.author {
             text-transform: uppercase;
         }
-        .date {
         
+        .date {
+            &:before {
+                content: " on ";
+                font-style: italic;
+            }
         }
     }
     
@@ -77,9 +86,13 @@ article.post {
         padding: 0;
         
         a.tag {
+            font-size: $main-font-size / $golden-ratio;
+            text-transform: uppercase;
+            
             &:after {
                 content:","
             }
+            
             &:last-of-type:after {
                 content:""
             }
@@ -92,5 +105,13 @@ article.post {
         line-height: $main-line-height;
         margin: 0;
         padding: 0;
+        
+        a.read-more {
+            color: #777;
+            font-family: $font-sans;
+            font-size: $main-font-size / $golden-ratio;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
     }
 }

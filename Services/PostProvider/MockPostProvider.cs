@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using CEverett.Models;
 
-namespace CEverett.Services.Mocks
+namespace CEverett.Services.PostProvider
 {
 	public class MockPostProvider : IPostProvider 
 	{
@@ -65,7 +65,8 @@ Vestibulum luctus, felis at maximus facilisis, orci sapien dignissim quam, sit a
 		public IEnumerable<Post> Get(int limit, int skip, string search)
 		{
 			return posts.Select(kv => kv.Value)
-						.Where(p => p.Id.StartsWith(search) ||
+						.Where(p => string.IsNullOrWhiteSpace(search) ||
+                                    p.Id.StartsWith(search) ||
 									p.Tags.Any(t => t.StartsWith(search)))
 						.Skip(skip)
 						.Take(limit)
