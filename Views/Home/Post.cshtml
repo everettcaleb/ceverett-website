@@ -1,0 +1,12 @@
+@using CEverett.ViewModels
+@model PostViewModel
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("_Post", Model)
+
+@section scripts 
+{
+	<script src="/js/post.js"></script>
+}

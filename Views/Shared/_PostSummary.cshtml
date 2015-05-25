@@ -1,0 +1,10 @@
+@using CEverett.ViewModels
+@model PostViewModel
+<article class="post">
+	@Html.Partial("_PostHeader")
+	<p class="summary">
+		@Model.Summary
+	</p>
+	<a href="/post/@Model.Id">Read More...</a>
+	@Html.Partial("_PostFooter")
+</article>

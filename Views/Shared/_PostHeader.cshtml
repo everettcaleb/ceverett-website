@@ -1,0 +1,17 @@
+@using CEverett.ViewModels
+@model PostViewModel
+<h2>@Model.Title</h2>
+<div class="meta">
+	<span class="byline">
+		By <a class="author" href="/about">Caleb Everett</a>
+	</span>
+	<div class="tags">
+		@foreach(var tag in Model.Tags)
+		{
+			<a class="tag" href="/?q=@tag">@tag</a>	
+		}
+	</div>
+	<span class="date">
+		@Model.PostDateTime.ToShortDateString()
+	</span>
+</div>

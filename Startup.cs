@@ -3,6 +3,8 @@ using Microsoft.AspNet.Diagnostics;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.WebUtilities;
 using Microsoft.Framework.DependencyInjection;
+using CEverett.Services;
+using CEverett.Services.Mocks;
 
 namespace CEverett
 {
@@ -12,6 +14,7 @@ namespace CEverett
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSingleton(typeof(IPostProvider), typeof(MockPostProvider));
         }
 
         public void Configure(IApplicationBuilder app)

@@ -1,0 +1,21 @@
+@import "compass";
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+body {
+	font-size: 14px;
+}
+
+header {
+	
+	nav {
+		display: block;
+		height: 44px;
+		transition: all 0.75s ease;
+	}
+}
