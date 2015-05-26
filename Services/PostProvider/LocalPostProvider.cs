@@ -10,8 +10,8 @@ namespace CEverett.Services.PostProvider
     {
         public async Task<Post> Get(string id)
         {
-            var metaPath = string.Format("Posts/{0}-meta.json", id);
-            var contentPath = string.Format("Posts/{0}-content.md", id);
+            var metaPath = string.Format("~/Posts/{0}-meta.json", id);
+            var contentPath = string.Format("~/Posts/{0}-content.md", id);
             
             Post post = null;
             
@@ -30,7 +30,7 @@ namespace CEverett.Services.PostProvider
         
 		public async Task<IEnumerable<Post>> Get(int limit, int skip, string search)
         {
-            var ids = await FileHelper.ReadAllJson<IEnumerable<string>>("Posts/list.json");
+            var ids = await FileHelper.ReadAllJson<IEnumerable<string>>("~/Posts/list.json");
             var posts = new List<Post>();
             var count = 0;
             
@@ -41,8 +41,8 @@ namespace CEverett.Services.PostProvider
                     return posts;
                 }
                 
-                var metaPath = string.Format("Posts/{0}-meta.json", id);
-                var contentPath = string.Format("Posts/{0}-content.md", id);
+                var metaPath = string.Format("~/Posts/{0}-meta.json", id);
+                var contentPath = string.Format("~/Posts/{0}-content.md", id);
                 
                 try 
                 {   
