@@ -33,5 +33,15 @@ namespace CEverett.Controllers
 			}
 			return View(new PostViewModel(post));
 		}
+        
+        [HttpGet]
+        [Route("debug")]
+        public ActionResult Debug()
+        {
+            return Json(new {
+                HOME = System.Environment.GetEnvironmentVariable("HOME"),
+                HOME_EXPANDED = System.Environment.GetEnvironmentVariable("HOME_EXPANDED")
+            });
+        }
 	}
 }

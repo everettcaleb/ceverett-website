@@ -13,13 +13,7 @@ namespace CEverett.Services.PostProvider
         
         public LocalPostProvider()
         {
-            HomeDirectory = Environment.GetEnvironmentVariable("HOME") ?? string.Empty;
-            
-            //Work-around for Mac development because HOME is "~" on a UNIX environment and Posts don't exist there
-            if(!File.Exists(Path.Combine(HomeDirectory, "Posts/list.json")))
-            {
-                HomeDirectory = string.Empty;
-            }
+            HomeDirectory = Environment.GetEnvironmentVariable("HOME_EXPANDED") ?? string.Empty;
         }
         
         public async Task<Post> Get(string id)
