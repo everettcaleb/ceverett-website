@@ -11,6 +11,7 @@
         "Microsoft.AspNet.Server.IIS": "1.0.0-beta4",
         "Microsoft.AspNet.Server.WebListener": "1.0.0-beta4",
         "Microsoft.AspNet.StaticFiles": "1.0.0-beta4",
+        "WindowsAzure.Storage": "4.4.1-preview",
         "Kestrel": "1.0.0-beta4"
     },
 
@@ -24,11 +25,7 @@
     },
 
     "frameworks": {
-        "dnx451": {
-            "dependencies": {
-                "WindowsAzure.Storage": "4.4.1-preview"
-            }
-        },
+        "dnx451": {},
         "dnxcore50": {}
     },
 

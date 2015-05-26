@@ -5,7 +5,7 @@ namespace CEverett.Services.PostProvider
     {
         public static IPostProvider Create(object p)
         {
-            return new LocalPostProvider();
+            return new CloudStoragePostProvider();
         }
     }
 }

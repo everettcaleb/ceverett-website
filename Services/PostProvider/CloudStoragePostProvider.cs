@@ -1,39 +1,24 @@
-/*
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CEverett.Models;
-using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Auth;
-using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace CEverett.Services.PostProvider
 {
     public class CloudStoragePostProvider : IPostProvider
-    {
-        private string StorageConnectionString { get; set; }
-        
-        public CloudStoragePostProvider()
-        {
-            var account = CloudConfigurationManager.GetSetting("StorageAccountName");
-            var key = CloudConfigurationManager.GetSetting("StorageAccountAccessKey");
-            StorageConnectionString = string.Format("DefaultEndpointsProtocol=https;AccountName={0};AccountKey={1}", account, key);
-        }
-        
+    {   
         public async Task<Post> Get(string id)
         {
-            
-            var metaPath = string.Format("Posts/{0}-meta.json", id);
-            var contentPath = string.Format("Posts/{0}-content.md", id);
+            var metaPath = string.Format("{0}-meta.json", id);
+            var contentPath = string.Format("{0}-content.md", id);
             
             Post post = null;
             
             try
             {
-                post = await FileHelper.ReadAllJson<Post>(metaPath);
-                post.Content = await FileHelper.ReadAllText(contentPath);
+                post = await FileHelper.ReadAllJsonFromBlob<Post>("posts", metaPath);
+                post.Content = await FileHelper.ReadAllTextFromBlob("posts", contentPath);
             }
             catch
             {
@@ -45,7 +30,7 @@ namespace CEverett.Services.PostProvider
         
 		public async Task<IEnumerable<Post>> Get(int limit, int skip, string search)
         {
-            var ids = await FileHelper.ReadAllJson<IEnumerable<string>>("Posts/list.json");
+            var ids = await FileHelper.ReadAllJsonFromBlob<IEnumerable<string>>("posts", "list.json");
             var posts = new List<Post>();
             var count = 0;
             
@@ -56,12 +41,12 @@ namespace CEverett.Services.PostProvider
                     return posts;
                 }
                 
-                var metaPath = string.Format("Posts/{0}-meta.json", id);
-                var contentPath = string.Format("Posts/{0}-content.md", id);
+                var metaPath = string.Format("{0}-meta.json", id);
+                var contentPath = string.Format("{0}-content.md", id);
                 
                 try 
                 {   
-                    var post = await FileHelper.ReadAllJson<Post>(metaPath);
+                    var post = await FileHelper.ReadAllJsonFromBlob<Post>("posts", metaPath);
                     if(search == null || 
                        post.Id.StartsWith(search) ||
                        post.Tags.Any(t => t.StartsWith(search)))
@@ -72,8 +57,7 @@ namespace CEverett.Services.PostProvider
                             continue;
                         }
                         
-                        post.Content = await FileHelper.ReadAllText(contentPath);
-                        
+                        post.Content = await FileHelper.ReadAllTextFromBlob("posts", contentPath);
                         posts.Add(post);
                     }
                 }
@@ -99,5 +83,3 @@ namespace CEverett.Services.PostProvider
         }
     }
 }
-#endif
-*/
