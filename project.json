@@ -24,7 +24,11 @@
     },
 
     "frameworks": {
-        "dnx451": {},
+        "dnx451": {
+            "dependencies": {
+                "WindowsAzure.Storage": "4.4.1-preview"
+            }
+        },
         "dnxcore50": {}
     },
 

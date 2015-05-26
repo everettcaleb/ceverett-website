@@ -1,15 +1,30 @@
+/*
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CEverett.Models;
+using Microsoft.WindowsAzure;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Auth;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace CEverett.Services.PostProvider
 {
-    public class LocalPostProvider : IPostProvider
+    public class CloudStoragePostProvider : IPostProvider
     {
+        private string StorageConnectionString { get; set; }
+        
+        public CloudStoragePostProvider()
+        {
+            var account = CloudConfigurationManager.GetSetting("StorageAccountName");
+            var key = CloudConfigurationManager.GetSetting("StorageAccountAccessKey");
+            StorageConnectionString = string.Format("DefaultEndpointsProtocol=https;AccountName={0};AccountKey={1}", account, key);
+        }
+        
         public async Task<Post> Get(string id)
         {
+            
             var metaPath = string.Format("Posts/{0}-meta.json", id);
             var contentPath = string.Format("Posts/{0}-content.md", id);
             
@@ -84,3 +99,5 @@ namespace CEverett.Services.PostProvider
         }
     }
 }
+#endif
+*/
