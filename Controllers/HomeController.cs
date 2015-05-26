@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using CEverett.Services;
 using CEverett.ViewModels;
@@ -16,16 +17,16 @@ namespace CEverett.Controllers
 		}
 		
 		[HttpGet]
-		public ActionResult Index(string q = "")
+		public async Task<ActionResult> Index(string q = "")
 		{
-			return View(postProvider.Get(10, 0, q).Select(p => new PostViewModel(p)));
+			return View((await postProvider.Get(10, 0, q)).Select(p => new PostViewModel(p)));
 		}
 		
 		[HttpGet]
 		[Route("post/{id}")]
-		public ActionResult Post(string id)
+		public async Task<ActionResult> Post(string id)
 		{
-			var post = postProvider.Get(id);
+			var post = await postProvider.Get(id);
 			if (post == null)
 			{
 				return HttpNotFound();

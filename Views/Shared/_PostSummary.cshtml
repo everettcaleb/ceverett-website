@@ -1,10 +1,23 @@
 @using CEverett.ViewModels
 @model PostViewModel
+
 <article class="post">
-	@Html.Partial("_PostHeader")
-	<p class="summary">
-		@Model.Summary
-        <a class="read-more" href="/post/@Model.Id">Read More...</a>
-	</p>
-	@Html.Partial("_PostFooter")
+    <header>
+        <a href="/post/@Model.Id">
+            <h2 class="title">@Model.Title</h2>
+        </a>
+        <div class="byline">
+        	<a class="author" href="/about">Caleb Everett</a>
+            <span class="date">
+        		@Model.PostDateTime.ToShortDateString()
+        	</span>
+        </div>
+    </header>
+    <div class="container">
+    	<div class="content">
+    		@Html.Raw(Model.Summary)
+    	</div>
+        
+    	@Html.Partial("_PostFooter")
+    </div>
 </article>

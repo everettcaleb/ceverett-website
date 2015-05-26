@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using CEverett.Models;
 
 namespace CEverett.Services.PostProvider
@@ -53,50 +54,66 @@ Vestibulum luctus, felis at maximus facilisis, orci sapien dignissim quam, sit a
 			};
 		}
 		
-		public Post Get(string id)
+		public async Task<Post> Get(string id)
 		{
-			if(posts.ContainsKey(id))
-			{
-				return posts[id];	
-			}
-			return null;
+            return await Task<Post>.Factory.StartNew(() =>{
+                
+                if(posts.ContainsKey(id))
+    			{
+    				return posts[id];	
+    			}
+    			return null;
+                
+            });
 		}
 		
-		public IEnumerable<Post> Get(int limit, int skip, string search)
+		public async Task<IEnumerable<Post>> Get(int limit, int skip, string search)
 		{
-			return posts.Select(kv => kv.Value)
-						.Where(p => string.IsNullOrWhiteSpace(search) ||
-                                    p.Id.StartsWith(search) ||
-									p.Tags.Any(t => t.StartsWith(search)))
-						.Skip(skip)
-						.Take(limit)
-						.OrderByDescending(p => p.PostDateTime);
+            return await Task<IEnumerable<Post>>.Factory.StartNew(() => {
+                
+			    return posts.Select(kv => kv.Value)
+				    .Where(p => string.IsNullOrWhiteSpace(search) ||
+                        p.Id.StartsWith(search) ||
+						p.Tags.Any(t => t.StartsWith(search)))
+					.Skip(skip)
+					.Take(limit)
+					.OrderByDescending(p => p.PostDateTime);
+                    
+            });
 		}
 		
-		public Post Save(Post post)
+		public async Task<Post> Save(Post post)
 		{
-			if(posts.ContainsKey(post.Id))
-			{
-				posts[post.Id] = post;
-			}
-			else 
-			{
-				posts.Add(post.Id, post);
-			}
-			return post;
+            return await Task<Post>.Factory.StartNew(() => {
+            
+    			if(posts.ContainsKey(post.Id))
+    			{
+    				posts[post.Id] = post;
+    			}
+    			else 
+    			{
+    				posts.Add(post.Id, post);
+    			}
+    			return post;
+            
+            });
 		}
 		
-		public void Delete(Post post)
+		public async Task Delete(Post post)
 		{
-			Delete(post.Id);
+            await Delete(post.Id);
 		}
 		
-		public void Delete(string id)
+		public async Task Delete(string id)
 		{
-			if(posts.ContainsKey(id))
-			{
-				posts.Remove(id);
-			}
+            await Task.Factory.StartNew(() => {
+            
+    			if(posts.ContainsKey(id))
+    			{
+    				posts.Remove(id);
+    			}
+            
+            });
 		}
 	}
 }

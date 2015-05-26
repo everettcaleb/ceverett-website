@@ -1,0 +1,15 @@
+{
+    "Id": "hello-world",
+    "Title": "The Classic Article of Lorem Ipsum",
+    "PostDateTime": "2015-05-15",
+    "Tags": [
+        "lorem",
+        "ipsum",
+        "post1"
+    ],
+    "Splash": "/images/hello-world.jpg",
+    "Color": "#FFF",
+    "SecondaryColor": "#DDD",
+    "Background": "#0667A4",
+    "Summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas imperdiet condimentum nulla, at ultricies lectus volutpat nec. Nulla facilisi. Sed dictum neque vel pellentesque pulvinar. Donec efficitur mollis sapien sit amet varius. Sed a porta leo, nec finibus leo. Sed sapien mi, tempor vitae ligula ac, porttitor feugiat erat. Donec id ex a augue viverra tempor venenatis sit amet orci. Vestibulum fermentum dapibus sem et blandit. Maecenas non erat varius, vulputate tellus in, varius dui. [Read More...](/post/hello-world)"
+}

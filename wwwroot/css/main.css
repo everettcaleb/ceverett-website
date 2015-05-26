@@ -1,4 +1,4 @@
-/* line 10, ../../sass/main.scss */
+/* line 12, ../../sass/main.scss */
 html, body {
   height: 100%;
   margin: 0;
@@ -7,35 +7,148 @@ html, body {
 }
 
 /* line 19, ../../sass/main.scss */
-header nav {
-  display: block;
+body {
+  padding-top: 44px;
+}
+
+/* line 23, ../../sass/main.scss */
+body > header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+/* line 29, ../../sass/main.scss */
+body > header nav {
+  background: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
   height: 44px;
   transition: all 0.75s ease;
 }
+/* line 35, ../../sass/main.scss */
+body > header nav a.brand {
+  color: #000;
+  display: inline-block;
+  text-decoration: none;
+  transition: box-shadow 0.75s ease;
+}
+/* line 41, ../../sass/main.scss */
+body > header nav a.brand:hover {
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.25);
+}
+/* line 45, ../../sass/main.scss */
+body > header nav a.brand h1 {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  line-height: 43px;
+  margin: 0;
+  padding: 0.5px 10px;
+  text-transform: uppercase;
+}
+@media (max-width: 500px) {
+  /* line 53, ../../sass/main.scss */
+  body > header nav a.brand h1 span.last-name {
+    display: none;
+    visibility: collapse;
+  }
+}
 
-/* line 26, ../../sass/main.scss */
+/* line 64, ../../sass/main.scss */
+.container {
+  margin: 0 auto;
+  width: 760px;
+}
+@media (max-width: 760px) {
+  /* line 64, ../../sass/main.scss */
+  .container {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* line 74, ../../sass/main.scss */
+.splash {
+  background: #000;
+  position: fixed;
+  width: 100%;
+  z-index: -5;
+}
+@media (max-width: 500px) {
+  /* line 74, ../../sass/main.scss */
+  .splash {
+    display: none;
+    visibility: collapse;
+  }
+}
+/* line 85, ../../sass/main.scss */
+.splash img {
+  opacity: 0.5;
+  width: 100%;
+}
+
+/* line 91, ../../sass/main.scss */
+.gist {
+  padding-top: 26px;
+}
+@media (max-width: 500px) {
+  /* line 91, ../../sass/main.scss */
+  .gist {
+    padding-top: 21px;
+  }
+}
+
+/* line 99, ../../sass/main.scss */
 article.post {
   padding: 26px;
 }
-/* line 29, ../../sass/main.scss */
+@media (max-width: 500px) {
+  /* line 99, ../../sass/main.scss */
+  article.post {
+    padding: 21px;
+  }
+}
+/* line 106, ../../sass/main.scss */
+article.post a {
+  text-decoration: none;
+}
+/* line 110, ../../sass/main.scss */
+article.post header {
+  text-align: center;
+}
+/* line 114, ../../sass/main.scss */
 article.post h2.title {
+  color: transparent;
+  display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 32.13844px;
+  font-size: 32px;
   line-height: 52px;
   margin: 0;
+  max-width: 100%;
   padding: 0;
 }
-/* line 36, ../../sass/main.scss */
+@media (max-width: 500px) {
+  /* line 114, ../../sass/main.scss */
+  article.post h2.title {
+    font-size: 26px;
+    line-height: 42px;
+  }
+}
+/* line 129, ../../sass/main.scss */
+article.post h2.title span {
+  color: black;
+  display: inline-block;
+}
+/* line 134, ../../sass/main.scss */
 article.post h2.title .filler {
   font-weight: 300;
   font-style: italic;
 }
-/* line 41, ../../sass/main.scss */
+/* line 139, ../../sass/main.scss */
 article.post h2.title .important {
   font-weight: 600;
   text-transform: uppercase;
 }
-/* line 47, ../../sass/main.scss */
+/* line 145, ../../sass/main.scss */
 article.post .byline, article.post .tags {
   color: #777;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -43,59 +156,114 @@ article.post .byline, article.post .tags {
   line-height: 26px;
   margin: 0;
 }
-/* line 54, ../../sass/main.scss */
+@media (max-width: 500px) {
+  /* line 145, ../../sass/main.scss */
+  article.post .byline, article.post .tags {
+    font-size: 13px;
+    line-height: 21px;
+  }
+}
+/* line 157, ../../sass/main.scss */
 article.post .byline a, article.post .tags a {
   color: inherit;
   text-decoration: none;
 }
-/* line 60, ../../sass/main.scss */
+/* line 163, ../../sass/main.scss */
 article.post .byline {
-  padding: 0 0 26px 0;
+  padding: 0;
 }
-/* line 63, ../../sass/main.scss */
+/* line 166, ../../sass/main.scss */
 article.post .byline:before {
   content: "By ";
   font-style: italic;
 }
-/* line 68, ../../sass/main.scss */
+/* line 171, ../../sass/main.scss */
 article.post .byline a.author {
   text-transform: uppercase;
 }
-/* line 73, ../../sass/main.scss */
+/* line 176, ../../sass/main.scss */
 article.post .byline .date:before {
   content: " on ";
   font-style: italic;
 }
-/* line 80, ../../sass/main.scss */
+/* line 183, ../../sass/main.scss */
 article.post .tags {
   padding: 0;
 }
-/* line 83, ../../sass/main.scss */
+/* line 186, ../../sass/main.scss */
 article.post .tags a.tag {
-  font-size: 9.88875px;
+  font-size: 10px;
   text-transform: uppercase;
 }
-/* line 87, ../../sass/main.scss */
+@media (max-width: 500px) {
+  /* line 186, ../../sass/main.scss */
+  article.post .tags a.tag {
+    font-size: 8px;
+  }
+}
+/* line 194, ../../sass/main.scss */
 article.post .tags a.tag:after {
   content: ",";
 }
-/* line 91, ../../sass/main.scss */
+/* line 198, ../../sass/main.scss */
 article.post .tags a.tag:last-of-type:after {
   content: "";
 }
-/* line 97, ../../sass/main.scss */
-article.post p {
-  font-family: "Merriweather", "Times New Roman", Times, serif;
-  font-size: 16px;
-  line-height: 26px;
+/* line 204, ../../sass/main.scss */
+article.post .content {
   margin: 0;
   padding: 0;
 }
-/* line 104, ../../sass/main.scss */
-article.post p a.read-more {
+/* line 208, ../../sass/main.scss */
+article.post .content p {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 26px 0 0 0;
+}
+@media (max-width: 500px) {
+  /* line 208, ../../sass/main.scss */
+  article.post .content p {
+    font-size: 13px;
+    line-height: 21px;
+    margin: 21px 0 0 0;
+  }
+}
+/* line 221, ../../sass/main.scss */
+article.post .content img {
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+/* line 227, ../../sass/main.scss */
+article.post .content a:last-of-type {
   color: #777;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 9.88875px;
+  font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
+}
+/* line 236, ../../sass/main.scss */
+article.post .youtube-wrapper {
+  border-radius: 4px;
+  height: 0;
+  margin-top: 26px;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  position: relative;
+}
+@media (max-width: 500px) {
+  /* line 236, ../../sass/main.scss */
+  article.post .youtube-wrapper {
+    margin-top: 21px;
+  }
+}
+/* line 249, ../../sass/main.scss */
+article.post .youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

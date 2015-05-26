@@ -3,6 +3,28 @@
 @{
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section styles 
+{
+    <style>
+        body,
+        body > header nav,
+        .splash {
+            background: @(Model.Background ?? "#fff") !important;
+        }
+        
+        h2.title span,
+        .content p,
+        a.brand {
+            color: @(Model.Color ?? "#000") !important;    
+        }
+        
+        .byline,
+        .tags,
+        .content a:last-of-type {
+            color: @(Model.SecondaryColor ?? "#ccc") !important;
+        }
+    </style>
+}
 
 @Html.Partial("_Post", Model)
 

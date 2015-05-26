@@ -1,9 +1,27 @@
 @using CEverett.ViewModels
 @model PostViewModel
+
+@if(!string.IsNullOrEmpty(Model.Splash)) 
+{
+    <div class="splash">
+        <img src="@Model.Splash" alt="" />
+    </div>
+}
 <article class="post">
-	@Html.Partial("_PostHeader")
-	<p class="content">
-		@Model.Content
-	</p>
-	@Html.Partial("_PostFooter")
+    <header>
+        <h2 class="title">@Model.Title</h2>
+        <div class="byline">
+        	<a class="author" href="/about">Caleb Everett</a>
+            <span class="date">
+        		@Model.PostDateTime.ToShortDateString()
+        	</span>
+        </div>
+    </header>
+    <div class="container">
+    	<div class="content">
+    		@Html.Raw(Model.Content)
+    	</div>
+        
+    	@Html.Partial("_PostFooter")
+    </div>
 </article>

@@ -1,6 +1,6 @@
 define(['jquery'], function($) {
     var fillerWords = [
-        'a', 'an', 'by', 'on', 'onto', 'the'  
+        'a', 'an', 'by', 'of', 'on', 'onto', 'the'  
     ];
     
     $('article.post').find('h2.title').each(function(i, title) {

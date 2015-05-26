@@ -1,5 +1,6 @@
 using System.Linq;
 using CEverett.Models;
+using MarkdownSharp;
 
 namespace CEverett.ViewModels
 {
@@ -7,10 +8,15 @@ namespace CEverett.ViewModels
 	{
 		public PostViewModel(Post post)
 		{
-			this.Content = post.Content;
+            var md = new Markdown();
+			this.Content = md.Transform(post.Content);
 			this.Id = post.Id;
 			this.PostDateTime = post.PostDateTime;
-			this.Summary = post.Summary;
+			this.Summary = md.Transform(post.Summary);
+            this.Splash = post.Splash;
+            this.Color = post.Color;
+            this.SecondaryColor = post.SecondaryColor;
+            this.Background = post.Background;
 			this.Tags = post.Tags.ToArray();
 			this.Title = post.Title;
 		}
