@@ -14,6 +14,9 @@ namespace CEverett.Services.PostProvider
         public LocalPostProvider()
         {
             HomeDirectory = Environment.GetEnvironmentVariable("HOME_EXPANDED") ?? string.Empty;
+            if(!string.IsNullOrEmpty(HomeDirectory)){
+                HomeDirectory = Path.Combine(HomeDirectory, "site", "repository");
+            }
         }
         
         public async Task<Post> Get(string id)
