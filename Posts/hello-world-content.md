@@ -1,16 +1,14 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas imperdiet condimentum nulla, at ultricies lectus volutpat nec. Nulla facilisi. Sed dictum neque vel pellentesque pulvinar. Donec efficitur mollis sapien sit amet varius. Sed a porta leo, nec finibus leo. Sed sapien mi, tempor vitae ligula ac, porttitor feugiat erat. Donec id ex a augue viverra tempor venenatis sit amet orci. Vestibulum fermentum dapibus sem et blandit. Maecenas non erat varius, vulputate tellus in, varius dui.
 
-<div class="youtube-wrapper">
-    <iframe width="700" height="394" src="https://www.youtube.com/embed/6kJK55HLzWU" frameborder="0" allowfullscreen></iframe>
-</div>
+[youtube video](youtube.com/watch?v=6kJK55HLzWU)
 
 Proin felis nibh, venenatis vitae tincidunt quis, hendrerit vitae lacus. Morbi vitae sem commodo, aliquet nulla nec, tincidunt nisl. Duis sagittis, lorem ac maximus varius, ligula nunc feugiat dui, a imperdiet elit arcu non sapien. Sed aliquet metus sed nisl malesuada maximus. Vestibulum laoreet est nisi, vitae posuere quam auctor eu. Quisque pharetra aliquet metus ac rutrum. Ut ultricies, orci sit amet imperdiet rhoncus, lectus turpis placerat nisl, et fermentum eros lectus sit amet felis. Nullam eleifend neque sapien, non dictum velit aliquet vel. Etiam ac hendrerit lacus. Donec condimentum mi sit amet est hendrerit, quis semper erat imperdiet. Etiam sapien erat, maximus quis purus vitae, blandit luctus est. Praesent sed arcu et mi lobortis tristique sed sit amet elit. Nullam vulputate mi ut eros lacinia, non ornare lacus tincidunt. Ut varius augue laoreet lectus sodales suscipit.
 
-<script src="https://gist.github.com/everettcaleb/904bd6abef82717fa8e9.js"></script>
+[code snippet](gist.github.com/904bd6abef82717fa8e9)
 
 Cras sapien massa, malesuada vel consequat vel, ullamcorper eget est. Fusce rhoncus id mauris sit amet mattis. Vestibulum id metus eu nisl convallis vehicula. Suspendisse quis justo at mi bibendum fringilla. Proin blandit nulla metus, ut pulvinar turpis varius et. Duis luctus lacinia tellus at ultrices. Vivamus eget felis quis erat porta consectetur. Sed volutpat ligula sit amet magna ultricies lacinia.
 
-![image](/images/hello-world.jpg)
+[hello-world image](/images/hello-world.jpg#unpop)
 
 Aenean condimentum efficitur dolor, in venenatis nunc luctus ut. Morbi vehicula rhoncus ante in feugiat. Nam vitae feugiat augue, eu tempor ante. Ut auctor, velit sed fermentum tincidunt, dolor urna pretium nisl, eget convallis mi arcu id urna. Morbi ac lacus orci. Nam sit amet elementum nisi, sit amet condimentum sapien. Aliquam dui risus, efficitur ac urna nec, luctus imperdiet risus. Vestibulum lacus eros, finibus ut ipsum pharetra, bibendum ultrices orci. Proin ligula diam, ornare eu enim sit amet, ultrices elementum arcu. Sed euismod venenatis libero, at semper nisl finibus in.
 

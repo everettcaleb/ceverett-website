@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using CEverett.Models;
@@ -8,10 +9,23 @@ namespace CEverett.Services.PostProvider
 {
     public class LocalPostProvider : IPostProvider
     {
+        public string HomeDirectory { get; set; }
+        
+        public LocalPostProvider()
+        {
+            HomeDirectory = Environment.GetEnvironmentVariable("HOME") ?? string.Empty;
+            
+            //Work-around for Mac development because HOME is "~" on a UNIX environment and Posts don't exist there
+            if(!File.Exists(Path.Combine(HomeDirectory, "Posts/list.json")))
+            {
+                HomeDirectory = string.Empty;
+            }
+        }
+        
         public async Task<Post> Get(string id)
         {
-            var metaPath = string.Format("Posts/{0}-meta.json", id);
-            var contentPath = string.Format("Posts/{0}-content.md", id);
+            var metaPath = Path.Combine(HomeDirectory, string.Format("Posts/{0}-meta.json", id));
+            var contentPath = Path.Combine(HomeDirectory, string.Format("Posts/{0}-content.md", id));
             
             Post post = null;
             
@@ -30,7 +44,7 @@ namespace CEverett.Services.PostProvider
         
 		public async Task<IEnumerable<Post>> Get(int limit, int skip, string search)
         {
-            var ids = await FileHelper.ReadAllJson<IEnumerable<string>>("Posts/list.json");
+            var ids = await FileHelper.ReadAllJson<IEnumerable<string>>(Path.Combine(HomeDirectory, "Posts/list.json"));
             var posts = new List<Post>();
             var count = 0;
             
@@ -41,8 +55,8 @@ namespace CEverett.Services.PostProvider
                     return posts;
                 }
                 
-                var metaPath = string.Format("Posts/{0}-meta.json", id);
-                var contentPath = string.Format("Posts/{0}-content.md", id);
+                var metaPath = Path.Combine(string.Format("Posts/{0}-meta.json", id));
+                var contentPath = Path.Combine(string.Format("Posts/{0}-content.md", id));
                 
                 try 
                 {   

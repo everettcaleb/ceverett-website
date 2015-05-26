@@ -88,14 +88,6 @@ body > header {
     }
 }
 
-.gist {
-    padding-top: $big-height;
-    
-    @media (max-width: $break-width) {
-        padding-top: ceil($big-height * $break-scale);
-    } 
-}
-
 article.post {
     padding: $big-height;
     

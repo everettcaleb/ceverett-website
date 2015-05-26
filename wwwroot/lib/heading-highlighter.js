@@ -1,19 +1,27 @@
+//Splits the title of a post into spans classed as either 'filler' or 'important' used for styling
 define(['jquery'], function($) {
     var fillerWords = [
         'a', 'an', 'by', 'of', 'on', 'onto', 'the'  
-    ];
+    ], fillerLen = fillerWords.length;
+    
+    function isFillerWord(word) {
+        var i = 0;
+        word = word.toLowerCase();
+        
+        for(; i < fillerLen; ++i) {
+            if(word === fillerWords[i]) {
+                return true;
+            }
+        }
+        
+        return false;
+    }
     
     $('article.post').find('h2.title').each(function(i, title) {
-        var $t = $(title);
-        $t.html($t.text().split(' ').map(function(word) {
-            var lowerWord = word.toLowerCase(), isFiller = false;
-            fillerWords.forEach(function(value, index) {
-                isFiller = isFiller || lowerWord === value;
-            });
-            
+        title.innerHTML = title.textContent.split(' ').map(function(word) {
             return "<span class='" +
-                (isFiller ? "filler" : "important") +
+                (isFillerWord(word) ? "filler" : "important") +
                 "'>" + word + "</span>";
-        }).join('&nbsp;'));
+        }).join('&nbsp;');
     });
 });

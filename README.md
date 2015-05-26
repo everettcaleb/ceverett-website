@@ -12,6 +12,8 @@ Software projects used to power this website:
 - [Syntactically Awesome Stylesheets (SASS)](http://sass-lang.com)
 - [jQuery](https://jquery.com)
 - [RequireJS](http://requirejs.org)
+- [MarkdownSharp](https://code.google.com/p/markdownsharp/)
+- [gist-embed.js (with modifications)](https://github.com/blairvanderhoof/gist-embed)
 
 ## License
 Copyright © 2015 Caleb Everett
