@@ -73,7 +73,10 @@ namespace CEverett.Services.PostProvider
                         posts.Add(post);
                     }
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Trace.TraceError(string.Format("{0}: {1}\n{2}", ex.GetType().Name, ex.Message, ex.StackTrace));    
+                }
             }
             
             return posts;

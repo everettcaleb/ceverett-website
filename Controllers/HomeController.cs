@@ -17,9 +17,9 @@ namespace CEverett.Controllers
 		}
 		
 		[HttpGet]
-		public async Task<ActionResult> Index(string q = "")
+		public async Task<ActionResult> Index(string q = null)
 		{
-			return View((await postProvider.Get(10, 0, q)).Select(p => new PostViewModel(p)));
+			return View((await postProvider.Get(100, 0, q)).Select(p => new PostViewModel(p)));
 		}
 		
 		[HttpGet]
