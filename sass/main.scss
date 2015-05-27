@@ -71,7 +71,9 @@ body > header {
     }
 }
 
-.gist {
+.gist, 
+.gist .gist-data .file-data td span,
+.gist .gist-data .file-data td pre .line {
     font-size: 12px !important;
 }
 
