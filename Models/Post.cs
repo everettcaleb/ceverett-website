@@ -15,6 +15,8 @@ namespace CEverett.Models
 		public DateTime PostDateTime { get; set; }
 		public string Summary { get; set; }
         public string Splash { get; set; }
+        public string TwitterSplash { get; set; }
+        public string TwitterSmallSplash { get; set; }
         public string Color { get; set; }
         public string SecondaryColor { get; set; }
         public string Background { get; set; }

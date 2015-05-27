@@ -3,6 +3,10 @@
 @{
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section meta 
+{
+    @Html.Partial("_PostTwitterCardMeta", Model)
+}
 @section styles 
 {
     <style>

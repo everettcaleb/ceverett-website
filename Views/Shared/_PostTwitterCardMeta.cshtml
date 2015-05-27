@@ -1,0 +1,17 @@
+@using CEverett.ViewModels
+@model PostViewModel
+
+@if(Model.TwitterSplash != null) {
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="@Model.TwitterSplash">
+}
+else {
+    <meta name="twitter:card" content="summary">
+    if(Model.TwitterSmallSplash != null) {
+        <meta name="twitter:image" content="@Model.TwitterSmallSplash">
+    }
+}
+<meta name="twitter:site" content="&#64everettcaleb">
+<meta name="twitter:creator" content="&#64everettcaleb">
+<meta name="twitter:title" content="@Model.Title">
+<meta name="twitter:description" content="@Model.Summary">
