@@ -22,7 +22,7 @@ namespace CEverett
             app.UseErrorPage(ErrorPageOptions.ShowAll);
             app.UseStaticFiles(new StaticFileOptions {
                 OnPrepareResponse = (context) => {
-                    context.Context.Response.Headers.Add("Cache-Control", new [] { "max-age=86400" });
+                    context.Context.Response.Headers.Add("Cache-Control", new [] { "max-age=86400000" });
                 }
             });
             app.UseStatusCodePages();
