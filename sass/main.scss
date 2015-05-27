@@ -125,8 +125,13 @@ body > footer {
     }
     
     img {
-        opacity: 0.5;
+        opacity: 0;
         width: 100%;
+        transition: opacity 0.75s ease-in;
+        
+        &.loaded {
+            opacity: 0.5;
+        }
     }
 }
 

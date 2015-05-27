@@ -28,4 +28,14 @@ define(['jquery', 'gist-embed'], function($) {
            $a.replaceWith('<img alt="' + $a.text() + '" src="' + result[0] + '"/>');
        }
     });
+    
+    $('div.splash').find('img').each(function(i, img) {
+        var $img = $(img),
+            interval = setInterval(function() {
+                if($img.height() > 0) {
+                    $img.addClass('loaded');
+                    clearInterval(interval);
+                }
+            }, 500);
+    });
 });

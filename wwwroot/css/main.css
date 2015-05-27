@@ -130,29 +130,34 @@ body > footer a {
 }
 /* line 127, ../../sass/main.scss */
 .splash img {
-  opacity: 0.5;
+  opacity: 0;
   width: 100%;
+  transition: opacity 0.75s ease-in;
+}
+/* line 132, ../../sass/main.scss */
+.splash img.loaded {
+  opacity: 0.5;
 }
 
-/* line 133, ../../sass/main.scss */
+/* line 138, ../../sass/main.scss */
 article.post {
   padding: 26px;
 }
 @media (max-width: 500px) {
-  /* line 133, ../../sass/main.scss */
+  /* line 138, ../../sass/main.scss */
   article.post {
     padding: 21px;
   }
 }
-/* line 140, ../../sass/main.scss */
+/* line 145, ../../sass/main.scss */
 article.post a {
   text-decoration: none;
 }
-/* line 144, ../../sass/main.scss */
+/* line 149, ../../sass/main.scss */
 article.post header {
   text-align: center;
 }
-/* line 148, ../../sass/main.scss */
+/* line 153, ../../sass/main.scss */
 article.post h2.title {
   color: transparent;
   display: block;
@@ -164,28 +169,28 @@ article.post h2.title {
   padding: 0;
 }
 @media (max-width: 500px) {
-  /* line 148, ../../sass/main.scss */
+  /* line 153, ../../sass/main.scss */
   article.post h2.title {
     font-size: 26px;
     line-height: 42px;
   }
 }
-/* line 163, ../../sass/main.scss */
+/* line 168, ../../sass/main.scss */
 article.post h2.title span {
   color: black;
   display: inline-block;
 }
-/* line 168, ../../sass/main.scss */
+/* line 173, ../../sass/main.scss */
 article.post h2.title .filler {
   font-weight: 300;
   font-style: italic;
 }
-/* line 173, ../../sass/main.scss */
+/* line 178, ../../sass/main.scss */
 article.post h2.title .important {
   font-weight: 600;
   text-transform: uppercase;
 }
-/* line 179, ../../sass/main.scss */
+/* line 184, ../../sass/main.scss */
 article.post .byline, article.post .tags {
   color: #777;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -194,64 +199,64 @@ article.post .byline, article.post .tags {
   margin: 0;
 }
 @media (max-width: 500px) {
-  /* line 179, ../../sass/main.scss */
+  /* line 184, ../../sass/main.scss */
   article.post .byline, article.post .tags {
     font-size: 13px;
     line-height: 21px;
   }
 }
-/* line 191, ../../sass/main.scss */
+/* line 196, ../../sass/main.scss */
 article.post .byline a, article.post .tags a {
   color: inherit;
   text-decoration: none;
 }
-/* line 197, ../../sass/main.scss */
+/* line 202, ../../sass/main.scss */
 article.post .byline {
   padding: 0;
 }
-/* line 200, ../../sass/main.scss */
+/* line 205, ../../sass/main.scss */
 article.post .byline:before {
   content: "By ";
   font-style: italic;
 }
-/* line 205, ../../sass/main.scss */
+/* line 210, ../../sass/main.scss */
 article.post .byline a.author {
   text-transform: uppercase;
 }
-/* line 210, ../../sass/main.scss */
+/* line 215, ../../sass/main.scss */
 article.post .byline .date:before {
   content: " on ";
   font-style: italic;
 }
-/* line 217, ../../sass/main.scss */
+/* line 222, ../../sass/main.scss */
 article.post .tags {
   padding: 0;
 }
-/* line 220, ../../sass/main.scss */
+/* line 225, ../../sass/main.scss */
 article.post .tags a.tag {
   font-size: 10px;
   text-transform: uppercase;
 }
 @media (max-width: 500px) {
-  /* line 220, ../../sass/main.scss */
+  /* line 225, ../../sass/main.scss */
   article.post .tags a.tag {
     font-size: 8px;
   }
 }
-/* line 228, ../../sass/main.scss */
+/* line 233, ../../sass/main.scss */
 article.post .tags a.tag:after {
   content: ",";
 }
-/* line 232, ../../sass/main.scss */
+/* line 237, ../../sass/main.scss */
 article.post .tags a.tag:last-of-type:after {
   content: "";
 }
-/* line 238, ../../sass/main.scss */
+/* line 243, ../../sass/main.scss */
 article.post .content {
   margin: 0;
   padding: 0;
 }
-/* line 242, ../../sass/main.scss */
+/* line 247, ../../sass/main.scss */
 article.post .content p {
   font-family: "Merriweather", "Times New Roman", Times, serif;
   font-size: 16px;
@@ -259,20 +264,20 @@ article.post .content p {
   margin: 26px 0 0 0;
 }
 @media (max-width: 500px) {
-  /* line 242, ../../sass/main.scss */
+  /* line 247, ../../sass/main.scss */
   article.post .content p {
     font-size: 13px;
     line-height: 21px;
     margin: 21px 0 0 0;
   }
 }
-/* line 255, ../../sass/main.scss */
+/* line 260, ../../sass/main.scss */
 article.post .content img {
   border-radius: 4px;
   display: block;
   width: 100%;
 }
-/* line 261, ../../sass/main.scss */
+/* line 266, ../../sass/main.scss */
 article.post .content a:last-of-type {
   color: #777;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -280,7 +285,7 @@ article.post .content a:last-of-type {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 270, ../../sass/main.scss */
+/* line 275, ../../sass/main.scss */
 article.post .youtube-wrapper {
   border-radius: 4px;
   height: 0;
@@ -291,12 +296,12 @@ article.post .youtube-wrapper {
   position: relative;
 }
 @media (max-width: 500px) {
-  /* line 270, ../../sass/main.scss */
+  /* line 275, ../../sass/main.scss */
   article.post .youtube-wrapper {
     margin-top: 21px;
   }
 }
-/* line 283, ../../sass/main.scss */
+/* line 288, ../../sass/main.scss */
 article.post .youtube-wrapper iframe {
   position: absolute;
   top: 0;
