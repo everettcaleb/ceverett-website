@@ -71,12 +71,6 @@ body > header {
     }
 }
 
-.gist .file-data table.lines {
-    @media (max-width: $break-width) {
-        font-size: 10px;
-    }
-}
-
 .splash {
     background: #000;
     position: fixed;
