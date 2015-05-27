@@ -19,7 +19,7 @@ namespace CEverett.Controllers
 		[HttpGet]
 		public async Task<ActionResult> Index(string q = null)
 		{
-			return View((await postProvider.Get(100, 0, q)).Select(p => new PostViewModel(p)));
+			return View((await postProvider.Get(100, 0, q)).Select(p => new PostViewModel(p, Request)));
 		}
 		
 		[HttpGet]
@@ -31,7 +31,7 @@ namespace CEverett.Controllers
 			{
 				return HttpNotFound();
 			}
-			return View(new PostViewModel(post));
+			return View(new PostViewModel(post, Request));
 		}
         
         [HttpGet]

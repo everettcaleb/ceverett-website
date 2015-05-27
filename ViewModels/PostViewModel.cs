@@ -1,4 +1,5 @@
 using System.Linq;
+using Microsoft.AspNet.Http;
 using CEverett.Models;
 using MarkdownSharp;
 
@@ -6,7 +7,7 @@ namespace CEverett.ViewModels
 {
 	public class PostViewModel : Post
 	{
-		public PostViewModel(Post post)
+		public PostViewModel(Post post, HttpRequest request)
 		{
             var md = new Markdown();
 			this.Content = md.Transform(post.Content);
@@ -14,8 +15,8 @@ namespace CEverett.ViewModels
 			this.PostDateTime = post.PostDateTime;
 			this.Summary = post.Summary;
             this.Splash = post.Splash;
-            this.TwitterSplash = post.TwitterSplash;
-            this.TwitterSmallSplash = post.TwitterSmallSplash;
+            this.TwitterSplash = FullUrl(post.TwitterSplash, request);
+            this.TwitterSmallSplash = FullUrl(post.TwitterSmallSplash, request);
             this.Color = post.Color;
             this.SecondaryColor = post.SecondaryColor;
             this.Background = post.Background;
@@ -23,5 +24,11 @@ namespace CEverett.ViewModels
 			this.Title = post.Title;
             this.Hidden = post.Hidden;
 		}
+        
+        private static string FullUrl(string relative, HttpRequest request)
+        {
+            if(relative == null) { return null; }
+            return string.Format("{0}://{1}{2}", request.Scheme, request.Host, relative);
+        }
 	}
 }
