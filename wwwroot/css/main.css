@@ -66,14 +66,12 @@ body > header nav a.brand h1 {
   }
 }
 
-@media (max-width: 500px) {
-  /* line 74, ../../sass/main.scss */
-  .gist .file-data table.lines {
-    font-size: 10px;
-  }
+/* line 74, ../../sass/main.scss */
+.gist {
+  font-size: 12px !important;
 }
 
-/* line 80, ../../sass/main.scss */
+/* line 78, ../../sass/main.scss */
 .splash {
   background: #000;
   position: fixed;
@@ -81,37 +79,37 @@ body > header nav a.brand h1 {
   z-index: -5;
 }
 @media (max-width: 500px) {
-  /* line 80, ../../sass/main.scss */
+  /* line 78, ../../sass/main.scss */
   .splash {
     display: none;
     visibility: collapse;
   }
 }
-/* line 91, ../../sass/main.scss */
+/* line 89, ../../sass/main.scss */
 .splash img {
   opacity: 0.5;
   width: 100%;
 }
 
-/* line 97, ../../sass/main.scss */
+/* line 95, ../../sass/main.scss */
 article.post {
   padding: 26px;
 }
 @media (max-width: 500px) {
-  /* line 97, ../../sass/main.scss */
+  /* line 95, ../../sass/main.scss */
   article.post {
     padding: 21px;
   }
 }
-/* line 104, ../../sass/main.scss */
+/* line 102, ../../sass/main.scss */
 article.post a {
   text-decoration: none;
 }
-/* line 108, ../../sass/main.scss */
+/* line 106, ../../sass/main.scss */
 article.post header {
   text-align: center;
 }
-/* line 112, ../../sass/main.scss */
+/* line 110, ../../sass/main.scss */
 article.post h2.title {
   color: transparent;
   display: block;
@@ -123,28 +121,28 @@ article.post h2.title {
   padding: 0;
 }
 @media (max-width: 500px) {
-  /* line 112, ../../sass/main.scss */
+  /* line 110, ../../sass/main.scss */
   article.post h2.title {
     font-size: 26px;
     line-height: 42px;
   }
 }
-/* line 127, ../../sass/main.scss */
+/* line 125, ../../sass/main.scss */
 article.post h2.title span {
   color: black;
   display: inline-block;
 }
-/* line 132, ../../sass/main.scss */
+/* line 130, ../../sass/main.scss */
 article.post h2.title .filler {
   font-weight: 300;
   font-style: italic;
 }
-/* line 137, ../../sass/main.scss */
+/* line 135, ../../sass/main.scss */
 article.post h2.title .important {
   font-weight: 600;
   text-transform: uppercase;
 }
-/* line 143, ../../sass/main.scss */
+/* line 141, ../../sass/main.scss */
 article.post .byline, article.post .tags {
   color: #777;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -153,64 +151,64 @@ article.post .byline, article.post .tags {
   margin: 0;
 }
 @media (max-width: 500px) {
-  /* line 143, ../../sass/main.scss */
+  /* line 141, ../../sass/main.scss */
   article.post .byline, article.post .tags {
     font-size: 13px;
     line-height: 21px;
   }
 }
-/* line 155, ../../sass/main.scss */
+/* line 153, ../../sass/main.scss */
 article.post .byline a, article.post .tags a {
   color: inherit;
   text-decoration: none;
 }
-/* line 161, ../../sass/main.scss */
+/* line 159, ../../sass/main.scss */
 article.post .byline {
   padding: 0;
 }
-/* line 164, ../../sass/main.scss */
+/* line 162, ../../sass/main.scss */
 article.post .byline:before {
   content: "By ";
   font-style: italic;
 }
-/* line 169, ../../sass/main.scss */
+/* line 167, ../../sass/main.scss */
 article.post .byline a.author {
   text-transform: uppercase;
 }
-/* line 174, ../../sass/main.scss */
+/* line 172, ../../sass/main.scss */
 article.post .byline .date:before {
   content: " on ";
   font-style: italic;
 }
-/* line 181, ../../sass/main.scss */
+/* line 179, ../../sass/main.scss */
 article.post .tags {
   padding: 0;
 }
-/* line 184, ../../sass/main.scss */
+/* line 182, ../../sass/main.scss */
 article.post .tags a.tag {
   font-size: 10px;
   text-transform: uppercase;
 }
 @media (max-width: 500px) {
-  /* line 184, ../../sass/main.scss */
+  /* line 182, ../../sass/main.scss */
   article.post .tags a.tag {
     font-size: 8px;
   }
 }
-/* line 192, ../../sass/main.scss */
+/* line 190, ../../sass/main.scss */
 article.post .tags a.tag:after {
   content: ",";
 }
-/* line 196, ../../sass/main.scss */
+/* line 194, ../../sass/main.scss */
 article.post .tags a.tag:last-of-type:after {
   content: "";
 }
-/* line 202, ../../sass/main.scss */
+/* line 200, ../../sass/main.scss */
 article.post .content {
   margin: 0;
   padding: 0;
 }
-/* line 206, ../../sass/main.scss */
+/* line 204, ../../sass/main.scss */
 article.post .content p {
   font-family: "Merriweather", "Times New Roman", Times, serif;
   font-size: 16px;
@@ -218,20 +216,20 @@ article.post .content p {
   margin: 26px 0 0 0;
 }
 @media (max-width: 500px) {
-  /* line 206, ../../sass/main.scss */
+  /* line 204, ../../sass/main.scss */
   article.post .content p {
     font-size: 13px;
     line-height: 21px;
     margin: 21px 0 0 0;
   }
 }
-/* line 219, ../../sass/main.scss */
+/* line 217, ../../sass/main.scss */
 article.post .content img {
   border-radius: 4px;
   display: block;
   width: 100%;
 }
-/* line 225, ../../sass/main.scss */
+/* line 223, ../../sass/main.scss */
 article.post .content a:last-of-type {
   color: #777;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -239,7 +237,7 @@ article.post .content a:last-of-type {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 234, ../../sass/main.scss */
+/* line 232, ../../sass/main.scss */
 article.post .youtube-wrapper {
   border-radius: 4px;
   height: 0;
@@ -250,12 +248,12 @@ article.post .youtube-wrapper {
   position: relative;
 }
 @media (max-width: 500px) {
-  /* line 234, ../../sass/main.scss */
+  /* line 232, ../../sass/main.scss */
   article.post .youtube-wrapper {
     margin-top: 21px;
   }
 }
-/* line 247, ../../sass/main.scss */
+/* line 245, ../../sass/main.scss */
 article.post .youtube-wrapper iframe {
   position: absolute;
   top: 0;
