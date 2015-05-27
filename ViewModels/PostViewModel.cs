@@ -21,6 +21,7 @@ namespace CEverett.ViewModels
             this.Background = post.Background;
 			this.Tags = post.Tags.ToArray();
 			this.Title = post.Title;
+            this.Hidden = post.Hidden;
 		}
 	}
 }

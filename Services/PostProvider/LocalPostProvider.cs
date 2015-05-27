@@ -62,6 +62,11 @@ namespace CEverett.Services.PostProvider
                        post.Id.StartsWith(search) ||
                        post.Tags.Any(t => t.StartsWith(search)))
                     {
+                        if(post.Hidden)
+                        {
+                            continue;
+                        }
+                        
                         ++count;
                         if(count <= skip)
                         {
