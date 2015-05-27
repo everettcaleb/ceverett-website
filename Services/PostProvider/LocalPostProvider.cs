@@ -52,8 +52,8 @@ namespace CEverett.Services.PostProvider
                     return posts;
                 }
                 
-                var metaPath = Path.Combine(string.Format("Posts/{0}-meta.json", id));
-                var contentPath = Path.Combine(string.Format("Posts/{0}-content.md", id));
+                var metaPath = Path.Combine(HomeDirectory, string.Format("Posts/{0}-meta.json", id));
+                var contentPath = Path.Combine(HomeDirectory, string.Format("Posts/{0}-content.md", id));
                 
                 try 
                 {   
