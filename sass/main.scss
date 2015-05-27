@@ -76,6 +76,27 @@ body > header {
 	}
 }
 
+body > footer {
+    background: #000;
+    color: #777;
+    font-family: $font-sans;
+    font-size: $main-height;
+    line-height: $big-height;
+    margin: 0;
+    
+    a {
+        color: inherit;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    @media (max-width: $break-width) {
+        font-size: ceil($main-height * $break-scale);
+        line-height: ceil($big-height * $break-scale);
+        padding: ceil($big-height * $break-scale);
+    }
+}
+
 .container {
     margin: 0 auto;
     width: $container-width;
