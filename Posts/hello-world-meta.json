@@ -8,6 +8,7 @@
         "post1"
     ],
     "Splash": "/images/hello-world.jpg",
+    "TwitterSplash": "/images/hello-world-small.jpg",
     "Color": "#FFF",
     "SecondaryColor": "#DDD",
     "Background": "#0667A4",
