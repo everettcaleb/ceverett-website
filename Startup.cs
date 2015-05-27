@@ -2,6 +2,7 @@ using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Diagnostics;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.WebUtilities;
+using Microsoft.AspNet.StaticFiles;
 using Microsoft.Framework.DependencyInjection;
 using CEverett.Services;
 
@@ -19,7 +20,11 @@ namespace CEverett
         public void Configure(IApplicationBuilder app)
         {
             app.UseErrorPage(ErrorPageOptions.ShowAll);
-            app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions {
+                OnPrepareResponse = (context) => {
+                    context.Context.Response.Headers.Add("Cache-Control", new [] { "max-age=86400" });
+                }
+            });
             app.UseStatusCodePages();
             app.UseMvc();
             
