@@ -2,7 +2,8 @@
 My personal website written with ASP.NET 5 for Azure
 
 Currently at [ceverett-new.azurewebsites.net](http://ceverett-new.azurewebsites.net).  
-Eventually it'll replace my current website at [ceverett.me](http://ceverett.me).
+Eventually it'll replace my current website at [ceverett.me](http://ceverett.me).  
+To see progress and what's coming next, check out the [Trello Board](https://trello.com/b/hEtrhJx5).
 
 ## Attribution
 Software projects used to power this website:
