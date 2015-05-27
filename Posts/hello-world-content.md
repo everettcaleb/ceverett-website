@@ -4,7 +4,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas imperdiet cond
 
 Proin felis nibh, venenatis vitae tincidunt quis, hendrerit vitae lacus. Morbi vitae sem commodo, aliquet nulla nec, tincidunt nisl. Duis sagittis, lorem ac maximus varius, ligula nunc feugiat dui, a imperdiet elit arcu non sapien. Sed aliquet metus sed nisl malesuada maximus. Vestibulum laoreet est nisi, vitae posuere quam auctor eu. Quisque pharetra aliquet metus ac rutrum. Ut ultricies, orci sit amet imperdiet rhoncus, lectus turpis placerat nisl, et fermentum eros lectus sit amet felis. Nullam eleifend neque sapien, non dictum velit aliquet vel. Etiam ac hendrerit lacus. Donec condimentum mi sit amet est hendrerit, quis semper erat imperdiet. Etiam sapien erat, maximus quis purus vitae, blandit luctus est. Praesent sed arcu et mi lobortis tristique sed sit amet elit. Nullam vulputate mi ut eros lacinia, non ornare lacus tincidunt. Ut varius augue laoreet lectus sodales suscipit.
 
-[code snippet](gist.github.com/904bd6abef82717fa8e9)
+[code snippet](gist.github.com/ceverett/904bd6abef82717fa8e9)
 
 Cras sapien massa, malesuada vel consequat vel, ullamcorper eget est. Fusce rhoncus id mauris sit amet mattis. Vestibulum id metus eu nisl convallis vehicula. Suspendisse quis justo at mi bibendum fringilla. Proin blandit nulla metus, ut pulvinar turpis varius et. Duis luctus lacinia tellus at ultrices. Vivamus eget felis quis erat porta consectetur. Sed volutpat ligula sit amet magna ultricies lacinia.
 
