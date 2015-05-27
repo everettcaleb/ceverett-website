@@ -1,0 +1,14 @@
+{
+    "Id": "about-caleb-everett",
+    "Title": "About the Author",
+    "PostDateTime": "2015-05-27",
+    "Tags": [
+    ],
+    /*"Splash": "/images/about-me.jpg",*/
+    /*"TwitterSmallSplash": "/images/calebeverett-small.jpg",*/
+    "Color": "#000",
+    "SecondaryColor": "#AAA",
+    "Background": "#FFF",
+    "Summary": "TODO. [Read More...](/post/about-caleb-everett)",
+    "Hidden": true
+}

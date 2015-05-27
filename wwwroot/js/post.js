@@ -1,1 +1,1 @@
-require(['jquery', 'heading-highlighter', 'unpopper'], function($, hh, up) {});
+require(['jquery', 'heading-highlighter', 'unpopper', 'tweet-button'], function($, hh, up, tb) {});

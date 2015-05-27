@@ -13,7 +13,7 @@ namespace CEverett.ViewModels
 			this.Content = md.Transform(post.Content);
 			this.Id = post.Id;
 			this.PostDateTime = post.PostDateTime;
-			this.Summary = post.Summary;
+			this.Summary = md.Transform(post.Summary);
             this.Splash = post.Splash;
             this.TwitterSplash = FullUrl(post.TwitterSplash, request);
             this.TwitterSmallSplash = FullUrl(post.TwitterSmallSplash, request);

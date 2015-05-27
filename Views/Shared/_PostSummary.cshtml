@@ -15,9 +15,7 @@
     </header>
     <div class="container">
     	<div class="content">
-            <p>
-    		    @Model.Summary
-            </p>
+            @Html.Raw(Model.Summary)
     	</div>
         
     	@Html.Partial("_PostFooter")

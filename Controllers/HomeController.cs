@@ -35,6 +35,13 @@ namespace CEverett.Controllers
 		}
         
         [HttpGet]
+        [Route("about")]
+        public ActionResult About()
+        {
+            return RedirectPermanent("/post/about-caleb-everett");
+        }
+        
+        [HttpGet]
         [Route("debug")]
         public ActionResult Debug()
         {
