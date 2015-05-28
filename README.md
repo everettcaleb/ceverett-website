@@ -15,6 +15,7 @@ Software projects used to power this website:
 - [RequireJS](http://requirejs.org)
 - [MarkdownSharp](https://code.google.com/p/markdownsharp/)
 - [gist-embed.js (with modifications)](https://github.com/blairvanderhoof/gist-embed)
+- [Twitter Tweet Button](https://dev.twitter.com/web/tweet-button)
 
 ## License
 Copyright © 2015 Caleb Everett
