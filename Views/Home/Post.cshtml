@@ -28,6 +28,13 @@
             color: @(Model.SecondaryColor ?? "#ccc") !important;
         }
     </style>
+    <noscript>
+        <style>
+            h2.title {
+                color: @(Model.Color ?? "#000") !important;
+            }
+        </style>
+    </noscript>
 }
 
 @Html.Partial("_Post", Model)
