@@ -1,13 +1,13 @@
 @using CEverett.ViewModels
 @model PostViewModel
 
-@if(!string.IsNullOrEmpty(Model.Splash)) 
-{
-    <div class="splash">
-        <img src="@Model.Splash" alt="" />
-    </div>
-}
 <article class="post">
+    @if(!string.IsNullOrEmpty(Model.Splash)) 
+    {
+        <div class="splash">
+            <a href="@(Model.Splash + "#unpop")"></a>
+        </div>
+    }
     <header>
         @Html.Partial("_PostTweetButton", Model.Title)
         <h2 class="title">@Model.Title</h2>

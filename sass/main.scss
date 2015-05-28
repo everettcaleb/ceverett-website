@@ -115,11 +115,18 @@ body > footer {
 
 .splash {
     background: #000;
+    left: 0;
     position: fixed;
+    top: 44px;
     width: 100%;
     z-index: -5;
     
     @media (max-width: $break-width) {
+        display: none;
+        visibility: collapse;
+    }
+    
+    a {
         display: none;
         visibility: collapse;
     }
