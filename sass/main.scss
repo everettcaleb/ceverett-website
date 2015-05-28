@@ -78,16 +78,25 @@ body > header {
 
 body > footer {
     background: #000;
+    bottom: 0;
     color: #777;
     font-family: $font-sans;
     font-size: $main-height;
+    left: 0;
     line-height: $big-height;
     margin: 0;
+    position: fixed;
+    width: 100%;
     
     a {
         color: inherit;
         font-weight: bold;
         text-decoration: none;
+    }
+    
+    p {
+        margin: 5px 0;
+        text-align: center;
     }
     
     @media (max-width: $break-width) {
@@ -156,6 +165,7 @@ a.twitter-share-button {
 
 article.post {
     padding: $big-height;
+    padding-bottom: $big-height * 2;
     
     @media (max-width: $break-width) {
         padding: ceil($big-height * $break-scale);
