@@ -21,6 +21,10 @@ body {
     -webkit-text-size-adjust: none;
 }
 
+main {
+    padding-bottom: 31px;
+}
+
 code,
 kbd,
 pre,
@@ -165,11 +169,11 @@ header .twitter-share-button {
 
 a.twitter-share-button {
     display: none;
+    font-family: $font-sans;
 }
 
 article.post {
     padding: $big-height;
-    padding-bottom: $big-height * 2;
     
     @media (max-width: $break-width) {
         padding: ceil($big-height * $break-scale);
