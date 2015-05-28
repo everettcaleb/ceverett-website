@@ -102,7 +102,6 @@ body > footer {
     @media (max-width: $break-width) {
         font-size: ceil($main-height * $break-scale);
         line-height: ceil($big-height * $break-scale);
-        padding: ceil($big-height * $break-scale);
     }
 }
 
