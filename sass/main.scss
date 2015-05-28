@@ -135,6 +135,18 @@ body > footer {
     }
 }
 
+.twitter-share-button {
+    float: right;
+}
+
+header .twitter-share-button {
+    float: none;
+}
+
+a.twitter-share-button {
+    display: none;
+}
+
 article.post {
     padding: $big-height;
     
@@ -220,6 +232,7 @@ article.post {
     }
     
     .tags {
+        display: inline-block;
         padding: 0;
         
         a.tag {

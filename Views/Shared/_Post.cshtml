@@ -9,7 +9,7 @@
 }
 <article class="post">
     <header>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-via="everettcaleb" data-related="everettcaleb">Tweet</a>
+        @Html.Partial("_PostTweetButton", Model.Title)
         <h2 class="title">@Model.Title</h2>
         <div class="byline">
         	<a class="author" href="/about">Caleb Everett</a>
@@ -23,6 +23,6 @@
     		@Html.Raw(Model.Content)
     	</div>
         
-    	@Html.Partial("_PostFooter")
+    	@Html.Partial("_PostFooter", Model)
     </div>
 </article>
