@@ -1,81 +1,152 @@
-/* line 12, ../../sass/main.scss */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+/* line 1, ../../sass/_article.scss */
+article.post {
+  padding: 26px;
 }
-
-/* line 19, ../../sass/main.scss */
-body {
-  padding-top: 44px;
-  -webkit-text-size-adjust: none;
+@media (max-width: 500px) {
+  /* line 1, ../../sass/_article.scss */
+  article.post {
+    padding: 21px;
+  }
 }
-
-/* line 24, ../../sass/main.scss */
-main {
-  padding-bottom: 31px;
-}
-
-/* line 28, ../../sass/main.scss */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em;
-}
-
-/* line 36, ../../sass/main.scss */
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-/* line 42, ../../sass/main.scss */
-body > header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 5;
-}
-/* line 48, ../../sass/main.scss */
-body > header nav {
-  background: #fff;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
-  height: 44px;
-  transition: all 0.75s ease;
-}
-/* line 54, ../../sass/main.scss */
-body > header nav a.brand {
-  color: #000;
-  display: inline-block;
+/* line 8, ../../sass/_article.scss */
+article.post a {
   text-decoration: none;
-  transition: box-shadow 0.75s ease;
 }
-/* line 60, ../../sass/main.scss */
-body > header nav a.brand:hover {
-  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.25);
+/* line 12, ../../sass/_article.scss */
+article.post header {
+  text-align: center;
 }
-/* line 64, ../../sass/main.scss */
-body > header nav a.brand h1 {
+/* line 16, ../../sass/_article.scss */
+article.post h2.title {
+  color: transparent;
+  display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 26px;
-  line-height: 43px;
+  font-size: 32px;
+  line-height: 52px;
   margin: 0;
-  padding: 0.5px 10px;
+  max-width: 100%;
+  padding: 0;
+}
+@media (max-width: 500px) {
+  /* line 16, ../../sass/_article.scss */
+  article.post h2.title {
+    font-size: 26px;
+    line-height: 42px;
+  }
+}
+/* line 31, ../../sass/_article.scss */
+article.post h2.title span {
+  color: black;
+  display: inline-block;
+}
+/* line 36, ../../sass/_article.scss */
+article.post h2.title .filler {
+  font-weight: 300;
+  font-style: italic;
+}
+/* line 41, ../../sass/_article.scss */
+article.post h2.title .important {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+/* line 47, ../../sass/_article.scss */
+article.post .byline, article.post .tags {
+  color: #777;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0;
+}
+@media (max-width: 500px) {
+  /* line 47, ../../sass/_article.scss */
+  article.post .byline, article.post .tags {
+    font-size: 13px;
+    line-height: 21px;
+  }
+}
+/* line 59, ../../sass/_article.scss */
+article.post .byline a, article.post .tags a {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 65, ../../sass/_article.scss */
+article.post .byline {
+  padding: 0;
+}
+/* line 68, ../../sass/_article.scss */
+article.post .byline:before {
+  content: "By ";
+  font-style: italic;
+}
+/* line 73, ../../sass/_article.scss */
+article.post .byline a.author {
+  text-transform: uppercase;
+}
+/* line 78, ../../sass/_article.scss */
+article.post .byline .date:before {
+  content: " on ";
+  font-style: italic;
+}
+/* line 85, ../../sass/_article.scss */
+article.post .tags {
+  display: inline-block;
+  padding: 0;
+}
+/* line 89, ../../sass/_article.scss */
+article.post .tags a.tag {
+  font-size: 10px;
   text-transform: uppercase;
 }
 @media (max-width: 500px) {
-  /* line 72, ../../sass/main.scss */
-  body > header nav a.brand h1 span.last-name {
-    display: none;
-    visibility: collapse;
+  /* line 89, ../../sass/_article.scss */
+  article.post .tags a.tag {
+    font-size: 8px;
   }
 }
+/* line 97, ../../sass/_article.scss */
+article.post .tags a.tag:after {
+  content: ",";
+}
+/* line 101, ../../sass/_article.scss */
+article.post .tags a.tag:last-of-type:after {
+  content: "";
+}
+/* line 107, ../../sass/_article.scss */
+article.post .content {
+  margin: 0;
+  padding: 0;
+}
+/* line 111, ../../sass/_article.scss */
+article.post .content p {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 26px 0 0 0;
+}
+@media (max-width: 500px) {
+  /* line 111, ../../sass/_article.scss */
+  article.post .content p {
+    font-size: 13px;
+    line-height: 21px;
+    margin: 21px 0 0 0;
+  }
+}
+/* line 124, ../../sass/_article.scss */
+article.post .content img {
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+/* line 130, ../../sass/_article.scss */
+article.post .content a:last-of-type {
+  color: #777;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 
-/* line 83, ../../sass/main.scss */
+/* line 1, ../../sass/_footer.scss */
 body > footer {
   background: #000;
   bottom: 0;
@@ -88,51 +159,139 @@ body > footer {
   position: fixed;
   width: 100%;
 }
-/* line 95, ../../sass/main.scss */
+/* line 13, ../../sass/_footer.scss */
 body > footer a {
   color: inherit;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 101, ../../sass/main.scss */
+/* line 19, ../../sass/_footer.scss */
 body > footer p {
   margin: 5px 0;
   text-align: center;
 }
 @media (max-width: 500px) {
-  /* line 83, ../../sass/main.scss */
+  /* line 1, ../../sass/_footer.scss */
   body > footer {
     font-size: 13px;
     line-height: 21px;
   }
-  /* line 110, ../../sass/main.scss */
+  /* line 28, ../../sass/_footer.scss */
   body > footer .code-related {
     display: none;
     visibility: collapse;
   }
 }
 
-/* line 117, ../../sass/main.scss */
-.container {
-  margin: 0 auto;
-  width: 760px;
+/* line 1, ../../sass/_header.scss */
+body > header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
 }
-@media (max-width: 760px) {
-  /* line 117, ../../sass/main.scss */
-  .container {
-    margin: 0;
-    width: 100%;
+/* line 7, ../../sass/_header.scss */
+body > header nav {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  height: 44px;
+  transition: all 0.75s ease;
+  z-index: 0;
+}
+/* line 13, ../../sass/_header.scss */
+body > header nav a.brand {
+  color: #000;
+  display: inline-block;
+  text-decoration: none;
+  transition: box-shadow 0.75s ease;
+}
+/* line 19, ../../sass/_header.scss */
+body > header nav a.brand:hover {
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.25);
+}
+/* line 23, ../../sass/_header.scss */
+body > header nav a.brand h1 {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  line-height: 43px;
+  margin: 0;
+  padding: 0.5px 10px;
+  text-transform: uppercase;
+}
+@media (max-width: 500px) {
+  /* line 31, ../../sass/_header.scss */
+  body > header nav a.brand h1 span.last-name {
+    display: none;
+    visibility: collapse;
   }
 }
+/* line 41, ../../sass/_header.scss */
+body > header div.background {
+  background: #fff;
+  height: 44px;
+  left: 0;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -999;
+}
 
-/* line 127, ../../sass/main.scss */
+/* line 1, ../../sass/_iOSGistFix.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 9, ../../sass/_iOSGistFix.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 15, ../../sass/_iOSGistFix.scss */
 .gist,
 .gist .gist-data .file-data td span,
 .gist .gist-data .file-data td pre .line {
   font-size: 12px !important;
 }
 
-/* line 133, ../../sass/main.scss */
+/* line 1, ../../sass/_mainContent.scss */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 8, ../../sass/_mainContent.scss */
+body {
+  padding-top: 44px;
+  -webkit-text-size-adjust: none;
+}
+
+/* line 13, ../../sass/_mainContent.scss */
+main {
+  padding-bottom: 31px;
+}
+
+/* line 17, ../../sass/_mainContent.scss */
+.container {
+  margin: 0 auto;
+  width: 760px;
+}
+@media (max-width: 760px) {
+  /* line 17, ../../sass/_mainContent.scss */
+  .container {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* line 27, ../../sass/_mainContent.scss */
 .splash {
   background: #000;
   left: 0;
@@ -142,192 +301,45 @@ body > footer p {
   z-index: -5;
 }
 @media (max-width: 500px) {
-  /* line 133, ../../sass/main.scss */
+  /* line 27, ../../sass/_mainContent.scss */
   .splash {
     display: none;
     visibility: collapse;
   }
 }
-/* line 146, ../../sass/main.scss */
+/* line 40, ../../sass/_mainContent.scss */
 .splash a {
   display: none;
   visibility: collapse;
 }
-/* line 151, ../../sass/main.scss */
+/* line 45, ../../sass/_mainContent.scss */
 .splash img {
   opacity: 0;
   width: 100%;
   transition: opacity 0.75s ease-in;
 }
-/* line 156, ../../sass/main.scss */
+/* line 50, ../../sass/_mainContent.scss */
 .splash img.loaded {
   opacity: 0.5;
 }
 
-/* line 162, ../../sass/main.scss */
+/* line 1, ../../sass/_twitter.scss */
 .twitter-share-button {
   float: right;
 }
 
-/* line 166, ../../sass/main.scss */
+/* line 5, ../../sass/_twitter.scss */
 header .twitter-share-button {
   float: none;
 }
 
-/* line 170, ../../sass/main.scss */
+/* line 9, ../../sass/_twitter.scss */
 a.twitter-share-button {
   display: none;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
-/* line 175, ../../sass/main.scss */
-article.post {
-  padding: 26px;
-}
-@media (max-width: 500px) {
-  /* line 175, ../../sass/main.scss */
-  article.post {
-    padding: 21px;
-  }
-}
-/* line 182, ../../sass/main.scss */
-article.post a {
-  text-decoration: none;
-}
-/* line 186, ../../sass/main.scss */
-article.post header {
-  text-align: center;
-}
-/* line 190, ../../sass/main.scss */
-article.post h2.title {
-  color: transparent;
-  display: block;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 32px;
-  line-height: 52px;
-  margin: 0;
-  max-width: 100%;
-  padding: 0;
-}
-@media (max-width: 500px) {
-  /* line 190, ../../sass/main.scss */
-  article.post h2.title {
-    font-size: 26px;
-    line-height: 42px;
-  }
-}
-/* line 205, ../../sass/main.scss */
-article.post h2.title span {
-  color: black;
-  display: inline-block;
-}
-/* line 210, ../../sass/main.scss */
-article.post h2.title .filler {
-  font-weight: 300;
-  font-style: italic;
-}
-/* line 215, ../../sass/main.scss */
-article.post h2.title .important {
-  font-weight: 600;
-  text-transform: uppercase;
-}
-/* line 221, ../../sass/main.scss */
-article.post .byline, article.post .tags {
-  color: #777;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 26px;
-  margin: 0;
-}
-@media (max-width: 500px) {
-  /* line 221, ../../sass/main.scss */
-  article.post .byline, article.post .tags {
-    font-size: 13px;
-    line-height: 21px;
-  }
-}
-/* line 233, ../../sass/main.scss */
-article.post .byline a, article.post .tags a {
-  color: inherit;
-  text-decoration: none;
-}
-/* line 239, ../../sass/main.scss */
-article.post .byline {
-  padding: 0;
-}
-/* line 242, ../../sass/main.scss */
-article.post .byline:before {
-  content: "By ";
-  font-style: italic;
-}
-/* line 247, ../../sass/main.scss */
-article.post .byline a.author {
-  text-transform: uppercase;
-}
-/* line 252, ../../sass/main.scss */
-article.post .byline .date:before {
-  content: " on ";
-  font-style: italic;
-}
-/* line 259, ../../sass/main.scss */
-article.post .tags {
-  display: inline-block;
-  padding: 0;
-}
-/* line 263, ../../sass/main.scss */
-article.post .tags a.tag {
-  font-size: 10px;
-  text-transform: uppercase;
-}
-@media (max-width: 500px) {
-  /* line 263, ../../sass/main.scss */
-  article.post .tags a.tag {
-    font-size: 8px;
-  }
-}
-/* line 271, ../../sass/main.scss */
-article.post .tags a.tag:after {
-  content: ",";
-}
-/* line 275, ../../sass/main.scss */
-article.post .tags a.tag:last-of-type:after {
-  content: "";
-}
-/* line 281, ../../sass/main.scss */
-article.post .content {
-  margin: 0;
-  padding: 0;
-}
-/* line 285, ../../sass/main.scss */
-article.post .content p {
-  font-family: "Merriweather", "Times New Roman", Times, serif;
-  font-size: 16px;
-  line-height: 26px;
-  margin: 26px 0 0 0;
-}
-@media (max-width: 500px) {
-  /* line 285, ../../sass/main.scss */
-  article.post .content p {
-    font-size: 13px;
-    line-height: 21px;
-    margin: 21px 0 0 0;
-  }
-}
-/* line 298, ../../sass/main.scss */
-article.post .content img {
-  border-radius: 4px;
-  display: block;
-  width: 100%;
-}
-/* line 304, ../../sass/main.scss */
-article.post .content a:last-of-type {
-  color: #777;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-/* line 313, ../../sass/main.scss */
+/* line 2, ../../sass/_youtube.scss */
 article.post .youtube-wrapper {
   border-radius: 4px;
   height: 0;
@@ -338,12 +350,12 @@ article.post .youtube-wrapper {
   position: relative;
 }
 @media (max-width: 500px) {
-  /* line 313, ../../sass/main.scss */
+  /* line 2, ../../sass/_youtube.scss */
   article.post .youtube-wrapper {
     margin-top: 21px;
   }
 }
-/* line 326, ../../sass/main.scss */
+/* line 15, ../../sass/_youtube.scss */
 article.post .youtube-wrapper iframe {
   position: absolute;
   top: 0;

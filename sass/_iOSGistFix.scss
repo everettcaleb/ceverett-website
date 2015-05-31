@@ -1,0 +1,19 @@
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+ 
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.gist, 
+.gist .gist-data .file-data td span,
+.gist .gist-data .file-data td pre .line {
+    font-size: 12px !important;
+}

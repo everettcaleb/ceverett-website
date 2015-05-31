@@ -1,0 +1,12 @@
+.twitter-share-button {
+    float: right;
+}
+
+header .twitter-share-button {
+    float: none;
+}
+
+a.twitter-share-button {
+    display: none;
+    font-family: $font-sans;
+}

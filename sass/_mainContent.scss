@@ -1,0 +1,54 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+body {
+    padding-top: 44px;
+    -webkit-text-size-adjust: none;
+}
+
+main {
+    padding-bottom: 31px;
+}
+
+.container {
+    margin: 0 auto;
+    width: $container-width;
+    
+    @media (max-width: $container-width) {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+.splash {
+    background: #000;
+    left: 0;
+    position: fixed;
+    top: 44px;
+    width: 100%;
+    z-index: -5;
+    
+    @media (max-width: $break-width) {
+        display: none;
+        visibility: collapse;
+    }
+    
+    a {
+        display: none;
+        visibility: collapse;
+    }
+    
+    img {
+        opacity: 0;
+        width: 100%;
+        transition: opacity 0.75s ease-in;
+        
+        &.loaded {
+            opacity: 0.5;
+        }
+    }
+}

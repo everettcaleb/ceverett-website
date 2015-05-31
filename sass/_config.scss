@@ -1,0 +1,10 @@
+@import "compass";
+$golden-ratio: 1.618;
+$main-height: 16px;
+$big-height: ceil($main-height * $golden-ratio);
+$small-height: ceil($main-height / $golden-ratio);
+$break-width: 500px;
+$break-scale: 0.8;
+$container-width: 760px;
+$font-sans: 'Open Sans', Helvetica, Arial, sans-serif;
+$font-serif: 'Merriweather', 'Times New Roman', Times, serif;

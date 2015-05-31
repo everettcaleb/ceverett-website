@@ -1,0 +1,138 @@
+article.post {
+    padding: $big-height;
+    
+    @media (max-width: $break-width) {
+        padding: ceil($big-height * $break-scale);
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    header {
+        text-align: center;
+    }
+    
+    h2.title {
+        color: rgba(0, 0, 0, 0);
+        display: block;
+        font-family: $font-sans;
+        font-size: $main-height * 2;
+        line-height: $big-height * 2;
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+        
+        @media (max-width: $break-width) {
+            font-size: ceil($main-height * 2 * $break-scale);
+            line-height: ceil($big-height * 2 * $break-scale);
+        }
+        
+        span {
+            color: rgba(0, 0, 0, 1.0);
+            display: inline-block;
+        }
+        
+        .filler {
+            font-weight: 300;
+            font-style: italic;
+        }
+        
+        .important {
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+    
+    .byline, .tags {
+        color: #777;
+        font-family: $font-sans;
+        font-size: $main-height;
+        line-height: $big-height;
+        margin: 0;
+        
+        @media (max-width: $break-width) {
+            font-size: ceil($main-height * $break-scale);
+            line-height: ceil($big-height * $break-scale);
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+    
+    .byline {
+        padding: 0;
+        
+        &:before {
+            content:"By ";
+            font-style: italic;
+        }
+        
+        a.author {
+            text-transform: uppercase;
+        }
+        
+        .date {
+            &:before {
+                content: " on ";
+                font-style: italic;
+            }
+        }
+    }
+    
+    .tags {
+        display: inline-block;
+        padding: 0;
+        
+        a.tag {
+            font-size: $small-height;
+            text-transform: uppercase;
+            
+            @media (max-width: $break-width) {
+                font-size: ceil($small-height * $break-scale);
+            }
+            
+            &:after {
+                content:","
+            }
+            
+            &:last-of-type:after {
+                content:""
+            }
+        }
+    }
+    
+    .content {
+        margin: 0;
+        padding: 0;
+        
+        p {
+            font-family: $font-serif;
+            font-size: $main-height;
+            line-height: $big-height;
+            margin: $big-height 0 0 0;
+            
+            @media (max-width: $break-width) {
+                font-size: ceil($main-height * $break-scale);
+                line-height: ceil($big-height * $break-scale);
+                margin: ceil($big-height * $break-scale) 0 0 0;
+            }
+        }
+        
+        img {
+            border-radius: 4px;
+            display: block;
+            width: 100%;
+        }
+        
+        a:last-of-type {
+            color: #777;
+            font-family: $font-sans;
+            font-size: $main-height;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}

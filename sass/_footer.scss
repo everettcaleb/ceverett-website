@@ -1,0 +1,33 @@
+body > footer {
+    background: #000;
+    bottom: 0;
+    color: #777;
+    font-family: $font-sans;
+    font-size: $main-height;
+    left: 0;
+    line-height: $big-height;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    
+    a {
+        color: inherit;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    p {
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    @media (max-width: $break-width) {
+        font-size: ceil($main-height * $break-scale);
+        line-height: ceil($big-height * $break-scale);
+        
+        .code-related {
+            display: none;
+            visibility: collapse;
+        }
+    }
+}
