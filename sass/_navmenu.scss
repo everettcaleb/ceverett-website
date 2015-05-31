@@ -1,0 +1,19 @@
+ul.navmenu {
+    background: #0667A4;
+    display: block;
+    list-style: none;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 44px;
+    transition: max-height 0.75s ease;
+    width: 400px;
+    
+    &.active {
+        box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.25);
+        max-height: 400px;
+    }
+}

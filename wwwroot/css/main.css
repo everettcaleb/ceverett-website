@@ -183,6 +183,66 @@ body > footer p {
   }
 }
 
+/* line 1, ../../sass/_hamburger.scss */
+a.hamburger {
+  display: block;
+  float: right;
+  height: 44px;
+  margin-right: 10px;
+  transition: box-shadow 0.75s ease;
+  width: 44px;
+}
+/* line 9, ../../sass/_hamburger.scss */
+a.hamburger:hover, a.hamburger.active {
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.25);
+}
+/* line 13, ../../sass/_hamburger.scss */
+a.hamburger span,
+a.hamburger span:before,
+a.hamburger span:after {
+  background: #000;
+  display: block;
+  height: 4px;
+  position: relative;
+  width: 30px;
+}
+/* line 23, ../../sass/_hamburger.scss */
+a.hamburger span {
+  left: 7px;
+  top: 20px;
+}
+/* line 28, ../../sass/_hamburger.scss */
+a.hamburger span:before {
+  top: -9px;
+}
+/* line 32, ../../sass/_hamburger.scss */
+a.hamburger span:after {
+  top: 5px;
+}
+/* line 36, ../../sass/_hamburger.scss */
+a.hamburger span:before,
+a.hamburger span:after {
+  content: " ";
+  transition: all 0.75s ease;
+}
+
+/* line 44, ../../sass/_hamburger.scss */
+a.hamburger.active span {
+  background: transparent;
+}
+/* line 48, ../../sass/_hamburger.scss */
+a.hamburger.active span:before {
+  top: 2px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* line 54, ../../sass/_hamburger.scss */
+a.hamburger.active span:after {
+  top: -2px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 /* line 1, ../../sass/_header.scss */
 body > header {
   position: fixed;
@@ -321,6 +381,27 @@ main {
 /* line 50, ../../sass/_mainContent.scss */
 .splash img.loaded {
   opacity: 0.5;
+}
+
+/* line 1, ../../sass/_navmenu.scss */
+ul.navmenu {
+  background: #0667A4;
+  display: block;
+  list-style: none;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 44px;
+  transition: max-height 0.75s ease;
+  width: 400px;
+}
+/* line 15, ../../sass/_navmenu.scss */
+ul.navmenu.active {
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.25);
+  max-height: 400px;
 }
 
 /* line 1, ../../sass/_twitter.scss */
