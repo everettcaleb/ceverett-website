@@ -1,1 +1,1 @@
-require(['jquery', 'heading-highlighter', 'unpopper', 'navmenu'], function($, hh, up, nm) {});
+require(['jquery', 'heading-highlighter', 'unpopper'], function($, hh, up) {});
