@@ -6,12 +6,7 @@ html, body {
 }
 
 body {
-    padding-top: 44px;
     -webkit-text-size-adjust: none;
-}
-
-main {
-    padding-bottom: 31px;
 }
 
 .container {
@@ -28,11 +23,16 @@ main {
     background: #000;
     left: 0;
     position: fixed;
-    top: 44px;
+    top: 0;
     width: 100%;
     z-index: -5;
     
     @media (max-width: $break-width) {
+        display: none;
+        visibility: collapse;
+    }
+    
+    @media print {
         display: none;
         visibility: collapse;
     }

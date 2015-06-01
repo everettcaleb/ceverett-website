@@ -104,6 +104,22 @@ article.post {
         }
     }
     
+    .copyright {
+        color: #000;
+        font-family: $font-sans;
+        font-size: $small-height;
+        text-align: center;
+        text-transform: uppercase;
+        
+        @media (max-width: $break-width) {
+            font-size: ceil($small-height * $break-scale);
+        }
+        
+        a {
+            color: inherit;
+        }
+    }
+    
     .content {
         margin: 0;
         padding: 0;

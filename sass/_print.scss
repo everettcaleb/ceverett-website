@@ -1,0 +1,25 @@
+@media print {
+    body,
+    .splash {
+        background: #fff !important;
+    }
+    
+    h2.title span,
+    .content p {
+        color: #000 !important;    
+    }
+    
+    .byline,
+    .tags,
+    .copyright,
+    .content a:last-of-type {
+        color: #ccc !important;
+    }
+    
+    iframe, 
+    .youtube-wrapper, 
+    a.brand {
+        display: none;
+        visibility: collapse;
+    }
+}
