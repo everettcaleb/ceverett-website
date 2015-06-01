@@ -12,12 +12,14 @@
     <style>
         body,
         body > header div.background,
+        ul.navmenu,
         .splash {
             background: @(Model.Background ?? "#fff") !important;
         }
         
         h2.title span,
         .content p,
+        ul.navmenu > i > a,
         a.brand {
             color: @(Model.Color ?? "#000") !important;    
         }
@@ -26,6 +28,12 @@
         .tags,
         .content a:last-of-type {
             color: @(Model.SecondaryColor ?? "#ccc") !important;
+        }
+        
+        a.hamburger span,
+        a.hamburger span:before,
+        a.hamburger span:after {
+            background: @(Model.Color ?? "#000");
         }
     </style>
     <noscript>
